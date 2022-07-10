@@ -1,0 +1,35 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: mqtt
+#mqtt 属性配置
+mqttsender:
+  hostUrl: tcp://47.118.51.155:1883
+  username:
+  password:
+  clientid: mqtt_send_client
+  cleanSession: true
+  reconnect: true
+  #连接超时
+  timeout: 1000
+  #设置会话心跳时间
+  keepalive: 100
+  defaultTopic: client:report:1
+  isOpen: true
+  qos: 1
+mqttaccepter:
+  hostUrl: tcp://47.118.51.155:1883
+  username:
+  password:
+  clientid: mqtt_accept_client
+  cleanSession: true
+  reconnect: true
+  #连接超时
+  timeout: 1000
+  #设置会话心跳时间
+  keepalive: 100
+  defaultTopic: client:report:1
+  isOpen: true
+  qos: 1
